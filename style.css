@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+    color: #fff;
+  }
+  
+  header {
+    background-color: #3f51b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .header-text {
+    text-align: center;
+  }
+  
+  .header-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .header-text p {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+  button {
+    background-color: #9c27b0;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 40px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  main {
+    padding: 80px;
+  }
+  
+  section h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .feature img {
+    width: 100px;
+    margin-right: 40px;
+  }
+  
+  .feature h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .feature p {
+    font-size: 16px;
+  }
+  
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 40px;
+  }
+  
+  .screenshot-grid img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .platforms {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .platforms a {
+    margin: 0 20px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  footer p {
+    font-size: 16px;
+    color: #999;
+  }
+  
