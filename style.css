@@ -6,7 +6,7 @@ body {
   }
   
   header {
-    background-color: #3f51b5;
+    background: linear-gradient(0deg, rgba(65,126,189,1) 0%, rgba(102,0,198,1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ body {
   }
   
   button {
-    background-color: #9c27b0;
+    background: linear-gradient(90deg, rgb(141, 196, 252) 0%, rgb(152, 48, 249) 100%);
     color: #fff;
     padding: 15px 40px;
     border-radius: 40px;
@@ -123,11 +123,17 @@ body {
   
   footer {
     text-align: center;
+    background-color: #083d63;
+    opacity: 0.5;
+    background-image:  linear-gradient(135deg, #4a4b58 25%, transparent 25%), linear-gradient(225deg, #7a26e1 25%, transparent 25%), linear-gradient(45deg, #4a4b58 25%, transparent 25%), linear-gradient(315deg, #4d4f64 25%, #001d49ab 25%);
+    background-position:  6px 0, 6px 0, 0 0, 0 0;
+    background-size: 12px 12px;
+    background-repeat: repeat;
     padding: 40px 0;
   }
   
   footer p {
     font-size: 16px;
-    color: #999;
+    color: #ffffff;
   }
   
