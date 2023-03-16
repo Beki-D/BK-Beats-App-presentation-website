@@ -1,139 +1,237 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #212121;
-    color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #212121;
+  color: #fff;
+}
+
+/* .cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  z-index: 999;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+} */
+
+#logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px 10px rgba(65,126,189,1), 0 0 50px 20px rgba(45, 45, 163, 0.3);
+}
+
+.cursor-follower::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 255, 0.2);
+  filter: blur(20px);
+  z-index: -1;
+}
+.cursor-follower {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #33394082;
+  background-image: url(./logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+}
+
+.cursor-follower.is-hidden {
+  opacity: 0;
+}
+
+header {
+  background: linear-gradient(0deg, rgba(65,126,189,1) 0%, rgba(102,0,198,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.header-text h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.header-text p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+button {
+  background: linear-gradient(90deg, rgb(141, 196, 252) 0%, rgb(152, 48, 249) 100%);
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 40px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  animation: wave 1s linear;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
   }
-  
-  header {
-    background: linear-gradient(0deg, rgba(65,126,189,1) 0%, rgba(102,0,198,1) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  25% {
+    transform: scale(1.05);
   }
-  
-  .header-text {
-    text-align: center;
+  50% {
+    transform: scale(1);
   }
-  
-  .header-text h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
+  75% {
+    transform: scale(1.1);
   }
-  
-  .header-text p {
-    font-size: 20px;
-    margin-bottom: 40px;
+  100% {
+    transform: scale(1);
   }
-  
-  button {
-    background: linear-gradient(90deg, rgb(141, 196, 252) 0%, rgb(152, 48, 249) 100%);
-    color: #fff;
-    padding: 15px 40px;
-    border-radius: 40px;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  
-  .logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li {
-    margin: 0 20px;
-  }
-  
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  main {
-    padding: 80px;
-  }
-  
-  section h2 {
-    font-size: 30px;
-    margin-bottom: 40px;
-  }
-  
-  .feature {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  
-  .feature img {
-    width: 100px;
-    margin-right: 40px;
-  }
-  
-  .feature h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .feature p {
-    font-size: 16px;
-  }
-  
-  .screenshot-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    margin-top: 40px;
-  }
-  
-  .screenshot-grid img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .platforms {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-  }
-  
-  .platforms a {
-    margin: 0 20px;
-  }
-  
-  footer {
-    text-align: center;
-    background-color: #083d63;
-    opacity: 0.5;
-    background-image:  linear-gradient(135deg, #4a4b58 25%, transparent 25%), linear-gradient(225deg, #7a26e1 25%, transparent 25%), linear-gradient(45deg, #4a4b58 25%, transparent 25%), linear-gradient(315deg, #4d4f64 25%, #001d49ab 25%);
-    background-position:  6px 0, 6px 0, 0 0, 0 0;
-    background-size: 12px 12px;
-    background-repeat: repeat;
-    padding: 40px 0;
-  }
-  
-  footer p {
-    font-size: 16px;
-    color: #ffffff;
-  }
-  
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+main {
+  padding: 80px;
+}
+
+section h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.feature img {
+  width: 100px;
+  margin-right: 40px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.feature p {
+  font-size: 16px;
+}
+
+.screenshot-wrapper {
+  position: relative;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin-top: 40px;
+  position: relative; /* ensure child elements are positioned relative to this container */
+}
+
+.screenshot-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.screenshot-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: url("https://unsplash.it/200/1200");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(80px);
+  z-index: -1; /* move the pseudo-element behind the child elements */
+}
+
+
+.platforms {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.platforms a {
+  margin: 0 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: #083d63;
+  opacity: 0.5;
+  background-image:  linear-gradient(135deg, #4a4b58 25%, transparent 25%), linear-gradient(225deg, #7a26e1 25%, transparent 25%), linear-gradient(45deg, #4a4b58 25%, transparent 25%), linear-gradient(315deg, #4d4f64 25%, #001d49ab 25%);
+  background-position:  6px 0, 6px 0, 0 0, 0 0;
+  background-size: 12px 12px;
+  background-repeat: repeat;
+  padding: 40px 0;
+}
+
+footer p {
+  font-size: 16px;
+  color: #ffffff;
+}
